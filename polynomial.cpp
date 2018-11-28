@@ -16,7 +16,14 @@ Polynomial::Polynomial(int d, const double *a)
 
 void Polynomial::display(ostream & os) const // jlr loops / ifsatser
 {
-	os << coeff[0];
+	int i = 0;
+	
+	for(int i = 0; i < degree; i++)
+	{
+	os << coeff[i];
+	i++;
+	}
+	
 }
 
 //Polynomial::Polynomial(double *c)
