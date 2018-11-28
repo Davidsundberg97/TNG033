@@ -18,14 +18,16 @@ public:
 	Polynomial(int d, const double *a);
 
 	//conversion constructor constant
-	/*Polynomial(double *c);*/
+	Polynomial(double c);
 
 	// COPY CONSTRUCTOR
-	//Polynomial(const Polynomial& source);
+	Polynomial(const Polynomial& source);
 
 	//assignment operator
-	/*Polynomial& operator=(const Polynomial& p);
+	Polynomial& operator=(const Polynomial& p) = default;
 
+	Polynomial& operator()(const double d) const;
+/*
 	Polynomial operator+(const Polynomial& b) const;
 
 	Polynomial operator+(double d) const;*/

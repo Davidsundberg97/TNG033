@@ -38,30 +38,30 @@ int main()
     std::cout << "p2 = " << p2 << std::endl;
    
 
-	//Polynomial p3{ 6.6 }; //conversion constructor: convert a double to a Polynomial
-	//Polynomial p4{ p1 };  //copy constructor
+	Polynomial p3{ 6.6 }; //conversion constructor: convert a double to a Polynomial
+	Polynomial p4{ p1 };  //copy constructor
 
- //   std::cout << "p3 = " << p3 << std::endl;
- //   std::cout << "p4 = " << p4 << std::endl;
+    std::cout << "p3 = " << p3 << std::endl;
+    std::cout << "p4 = " << p4 << std::endl;
 
 //    /*****************************************************
 //    * TEST PHASE 1                                       *
 //    * Polynomial: operator=                              *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 1\n";
-//
-//    p4 = p4; //self-assignement
-//    std::cout << "p4 = " << p4 << std::endl;
-//
-//    //coefficients of polynomials
-//    double v3[3] {-1, 0, 1};
-//	Polynomial p5{ 2, v3 };
-//
-//    p3 = p4 = p5;
-//
-//    std::cout << "p3 = " << p3 << std::endl;
-//    std::cout << "p4 = " << p4 << std::endl;
-//    std::cout << "p5 = " << p5 << std::endl;
+    std::cout << "\nTEST PHASE 1\n";
+
+    p4 = p4; //self-assignement
+    std::cout << "p4 = " << p4 << std::endl;
+
+    //coefficients of polynomials
+    double v3[3] {-1, 0, 1};
+	Polynomial p5{ 2, v3 };
+
+    p3 = p4 = p5;
+
+    std::cout << "p3 = " << p3 << std::endl;
+    std::cout << "p4 = " << p4 << std::endl;
+    std::cout << "p5 = " << p5 << std::endl;
 //
 //    /*****************************************************
 //    * TEST PHASE 2                                       *
