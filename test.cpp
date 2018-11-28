@@ -36,7 +36,7 @@ int main()
 
     std::cout << "p1 = " << p1 << std::endl;
     std::cout << "p2 = " << p2 << std::endl;
-    std::cout << "p2 = " << p2 << std::endl;
+   
 
 	//Polynomial p3{ 6.6 }; //conversion constructor: convert a double to a Polynomial
 	//Polynomial p4{ p1 };  //copy constructor

@@ -16,12 +16,13 @@ Polynomial::Polynomial(int d, const double *a)
 
 void Polynomial::display(ostream & os) const // jlr loops / ifsatser
 {
-	int i = 0;
+	
 	
 	for(int i = 0; i < degree; i++)
 	{
-	os << coeff[i];
-	i++;
+		if (i == 0) os << coeff[i] << " + ";
+		else os << coeff[i] << "x^" << i << " ";
+	
 	}
 	
 }
