@@ -19,19 +19,21 @@ class Expression
 public:
 
 	//Destructor
-	virtual ~Expression() = default; //Expression is a polymorphic class
+	 ~Expression() = default; //Expression is a polymorphic class
+
+	 
 
 	//clone
-	virtual Expression* clone() = 0; //objects of class Expr. can create copies of themselves
+	 //Expression* clone() = 0; //objects of class Expr. can create copies of themselves
 
 	//To evaluate an expression
-	virtual double evaluate() const = 0;
+	//virtual double evaluate() const = 0;
 
-	bool isRoot(int x) const;
+	//bool isRoot(int x) const;
 
 	friend ostream& operator<<(ostream &os, const Expression &e);
 
-	double operator()(const double d) const;
+	//double operator()(const double d) const;
 
 protected:
 	//Constructor

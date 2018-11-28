@@ -6,19 +6,24 @@
 #include "polynomial.h"
 
 //pointers?
-Polynomial::Polynomial(int d, double *a[])
-	:Expression(), degree{ d }, coeff{ new double[d + 1] }
+Polynomial::Polynomial(int d, const double *a)
+	:Expression(), degree{ d +1}, coeff{ new double[degree] }
 {
-	for (int i = 0; i < degree + 1; i++) {
+	for (int i = 0; i < degree; i++) {
 		coeff[i] = a[i];
 	}
 }
 
-Polynomial::Polynomial(double *c)
-	: degree{ 0 }, coeff{ new double[1] }
+void Polynomial::display(ostream & os) const // jlr loops / ifsatser
 {
-	coeff[degree] = c;
+	os << coeff[0];
 }
+
+//Polynomial::Polynomial(double *c)
+//	: degree{ 0 }, coeff{ new double[1] }
+//{
+//	coeff[degree] = c;
+//}
 
 /* COPY CONSTRUCTOR
 Polynomial::Polynomial(const Polynomial& source)
@@ -39,10 +44,10 @@ Polynomial& Polynomial::operator=(const Polynomial& p)
 	return *this;
 }*/
 
-int Polynomial::operator[](int i) const
-{
-	return 0;
-}
+//int Polynomial::operator[](int i) const
+//{
+//	return 0;
+//}
 
 
 

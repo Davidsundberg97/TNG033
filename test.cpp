@@ -38,11 +38,11 @@ int main()
     std::cout << "p2 = " << p2 << std::endl;
     std::cout << "p2 = " << p2 << std::endl;
 
-	Polynomial p3{ 6.6 }; //conversion constructor: convert a double to a Polynomial
-	Polynomial p4{ p1 };  //copy constructor
+	//Polynomial p3{ 6.6 }; //conversion constructor: convert a double to a Polynomial
+	//Polynomial p4{ p1 };  //copy constructor
 
-    std::cout << "p3 = " << p3 << std::endl;
-    std::cout << "p4 = " << p4 << std::endl;
+ //   std::cout << "p3 = " << p3 << std::endl;
+ //   std::cout << "p4 = " << p4 << std::endl;
 
 //    /*****************************************************
 //    * TEST PHASE 1                                       *

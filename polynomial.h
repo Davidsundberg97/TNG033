@@ -15,13 +15,13 @@ class Polynomial : public Expression
 {
 public:
 	//Constructor
-	Polynomial(int d, double *a[]);
+	Polynomial(int d, const double *a);
 
 	//conversion constructor constant
-	Polynomial(double *c);
+	/*Polynomial(double *c);*/
 
 	// COPY CONSTRUCTOR
-	Polynomial(const Polynomial& source);
+	//Polynomial(const Polynomial& source);
 
 	//assignment operator
 	/*Polynomial& operator=(const Polynomial& p);
@@ -30,12 +30,13 @@ public:
 
 	Polynomial operator+(double d) const;*/
 
-	int operator[](int i) const;
+	/*int operator[](int i) const;*/
 
 
-protected:
-	const int degree;
-	const double *coeff[];
+private:
+	int degree;
+	 double *coeff;
+	 void display(ostream &os) const override;
 };
 
 
