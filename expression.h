@@ -48,6 +48,8 @@ protected:
 	//Assignment operator
 	Expression& operator=(const Expression&) = default;
 
+	virtual double operator()(const double d) const = 0;
+
 };
 
 

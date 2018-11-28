@@ -26,7 +26,9 @@ public:
 	//assignment operator
 	Polynomial& operator=(const Polynomial& p) = default;
 
-	Polynomial& operator()(const double d) const;
+	double operator()(const double d) const;
+
+	bool isRoot( double test) ;
 /*
 	Polynomial operator+(const Polynomial& b) const;
 

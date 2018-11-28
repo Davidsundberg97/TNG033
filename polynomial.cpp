@@ -4,6 +4,7 @@
 **********************************************************/
 
 #include "polynomial.h"
+#include <cmath>
 
 //pointers?
 Polynomial::Polynomial(int d, const double *a)
@@ -45,9 +46,34 @@ Polynomial::Polynomial(const Polynomial& source)
 	}	//Make deep copys
 }
 
-Polynomial &Polynomial::operator()(const double d) const
+
+// d ska vara  f(x) = 2.2 + 3.3x + 4.4x^2 <=> f(d) = 2.2+ 3.3*d + 4.4*d^2
+//vill loopa d^i loopar degree längd
+double Polynomial::operator()(const double d) const
 {
+	double ans = 0;
+	for (int i = 0; i < degree; i++) {
+		ans = ans + coeff[i] * pow(d , i);
+	}
+
 	// TODO: insert return statement here
+
+	return ans;
+}
+
+bool Polynomial::isRoot(double test) 
+{
+	
+		if (operator()(test) == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	
+	
 }
 
 

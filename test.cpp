@@ -67,25 +67,25 @@ int main()
 //    * TEST PHASE 2                                       *
 //    * Polynomial: operator()                             *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 2\n";
-//
-//    std::cout << "p5(1) = " << p5(1) << std::endl;
-//    std::cout << "p1(3.3) = " << p1(3.3) << std::endl;
+    std::cout << "\nTEST PHASE 2\n";
+
+    std::cout << "p5(1) = " << p5(1) << std::endl;
+    std::cout << "p1(3.3) = " << p1(3.3) << std::endl;
 //
 //    /*****************************************************
 //    * TEST PHASE 3                                       *
 //    * Polynomial: isRoot                                 *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 3\n";
-//
-//	if (p5.isRoot(1))
-//	{
-//		std::cout << "One is a root of " << p5 << std::endl;
-//	}
-//	else
-//	{
-//		std::cout << "One is a not root of " << p5 << std::endl;
-//	}
+    std::cout << "\nTEST PHASE 3\n";
+
+	if (p5.isRoot(1))
+	{
+		std::cout << "One is a root of " << p5 << std::endl;
+	}
+	else
+	{
+		std::cout << "One is a not root of " << p5 << std::endl;
+	}
 //
 //    /*****************************************************
 //    * TEST PHASE 4                                       *
