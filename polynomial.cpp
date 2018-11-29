@@ -21,8 +21,8 @@ void Polynomial::display(ostream & os) const // jlr loops / ifsatser
 	
 	for(int i = 0; i < degree; i++)
 	{
-		if (i == 0) os << coeff[i] << " + ";
-		else os << coeff[i] << "x^" << i << " ";
+		if (i == 0) os << coeff[i] ;
+		else os << " + "<< coeff[i] << "x^" << i;
 	
 	}
 	
@@ -77,45 +77,97 @@ bool Polynomial::isRoot(double test)
 }
 
 
-/*
+
 // Assignment operator
 Polynomial& Polynomial::operator=(const Polynomial& p)
 {
 	Polynomial _copy(p);
 
-	//swap header (pointer to list), the rest of the
-	//pointers are correct, because of deep copy
-	//swap(head, _copy.head);
+	//
+	swap(this->coeff, _copy.coeff);
+	swap(this->degree, _copy.degree);
+
+
+	
 
 	return *this;
-}*/
 
-//int Polynomial::operator[](int i) const
-//{
-//	return 0;
-//}
+	/*degree = p.degree;
+
+	if (coeff != p.coeff) {
+		delete[] coeff;
+		coeff = new double[degree];
+
+		for (int i = 0; i < degree; i++) {
+			coeff[i] = p.coeff[i];
+		}
+
+		return *this;
+	}*/
+
+	
+}
+
+double &Polynomial::operator[](int i) const
+{
+
+	
+	return coeff[i];
+}
 
 
 
-//Polynomial Polynomial::operator+(const Polynomial& b) const {
+Polynomial Polynomial::operator+(const Polynomial& b) const {
+
+	Polynomial _copy(b);
+	Polynomial _thiscopy(*this);
+	Polynomial _thiscopy2(*this);
+	int i = 0;
+
+
+	if (b.degree < degree) {
+
+		for (i; i < b.degree; i++) {
+
+			_thiscopy2.coeff[i] = _copy.coeff[i] + _thiscopy.coeff[i];
+
+		}
+		for (i; i < degree; i++) {
+
+			_thiscopy2.coeff[i] = _thiscopy.coeff[i];
+
+		}
+	}
+	else {
+
+		for (i; i < degree; i++) {
+
+			_thiscopy2.coeff[i] = _copy.coeff[i] + _thiscopy.coeff[i];
+
+		}
+		for (i; i < b.degree; i++) {
+
+			_thiscopy2.coeff[i] = _copy.coeff[i];
+
+		}
+	}
+	return _thiscopy2;
+}
 //
-//	Polynomial _copy(b);
-//
-//	return _copy;
-//
-//}
 //
 //
-//
-//Polynomial Polynomial::operator+(double d) const {
-//
-//	Polynomial _copy(*this);
-//
-//	// _copy + d 
-//
-//	return _copy;
-//
-//}
+Polynomial operator+(double d, Polynomial &P)  {
+
+	Polynomial _copy(d);
+	Polynomial _copy2(d);
+
+	
+
+	_copy2 = _copy + P;
+
+		return _copy2;
+
+}
 //
 //int Polynomial::operator[](int i) const {
 //

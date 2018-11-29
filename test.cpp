@@ -91,43 +91,43 @@ int main()
 //    * TEST PHASE 4                                       *
 //    * Polynomial: operator[]                             *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 4\n";
-//
-//    p4[2] = 8;
-//    std::cout << "p4 = " << p4 << std::endl;
-//
-//	if (abs(p4[1]) < EPSILON) //compare a double with zero
-//	{
-//		std::cout << "Coefficient 1 of p4 is zero!\n";
-//	}
-//
-//    std::cout << "Coefficient zero of p1: " << p1[0] << std::endl;
-//
+    std::cout << "\nTEST PHASE 4\n";
+
+    p4[2] = 8;
+    std::cout << "p4 = " << p4 << std::endl;
+
+	if (abs(p4[1]) < EPSILON) //compare a double with zero
+	{
+		std::cout << "Coefficient 1 of p4 is zero!\n";
+	}
+
+    std::cout << "Coefficient zero of p1: " << p1[0] << std::endl;
+
 //    /*****************************************************
 //    * TEST PHASE 5                                       *
 //    * Polynomial: P1+P2                                  *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 5\n";
-//
-//    p4 = p1 + p2;
-//    std::cout << "p4 = " << p4 << std::endl << std::endl;
-//
-//    std::cout << "p1 = " << p1 << std::endl;
-//    std::cout << "p2 = " << p2 << std::endl;
-//    std::cout << "p3 = " << p3 << std::endl;
-//    std::cout << "p1 + p3 + p2 = " << p1 + p3 + p2 << std::endl;
-//
+    std::cout << "\nTEST PHASE 5\n";
+	
+    p4 = p1 + p2;
+    std::cout << "p4 = " << p4 << std::endl << std::endl;
+
+    std::cout << "p1 = " << p1 << std::endl;
+    std::cout << "p2 = " << p2 << std::endl;
+    std::cout << "p3 = " << p3 << std::endl;
+    std::cout << "p1 + p3 + p2 = " << p1 + p3 + p2 << std::endl;
+
 //    /*****************************************************
 //    * TEST PHASE 6                                       *
 //    * Polynomial: const+P and P+const                    *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 6\n";
-//
-//    p4 = 2.0 + p4;
-//    std::cout << "p4 = " << p4 << std::endl << std::endl;
-//
-//    p4 = 0 + p4 + 3.3;
-//    std::cout << "p4 = " << p4 << std::endl << std::endl;
+    std::cout << "\nTEST PHASE 6\n";
+
+    p4 = 2.0 + p4;
+    std::cout << "p4 = " << p4 << std::endl << std::endl;
+
+    p4 = 0 + p4 + 3.3;
+    std::cout << "p4 = " << p4 << std::endl << std::endl;
 //
 //    /*****************************************************
 //    * TEST PHASE 7                                       *
