@@ -11,10 +11,32 @@
 
 #include "expression.h"
 
+using namespace std;
+
 class Logarithm : public Expression
 {
 
-    //ADD CODE
+public:
+	//Constructor default
+	Logarithm();
+
+	Logarithm(const Expression &E, double c1, double c2, int base);
+
+	//clone()
+	Logarithm *clone() const override;
+
+	// 
+	double operator()(const double d) const override;
+
+private:
+	Expression *E;
+		double c1;
+		double c2;
+		int base;
+
+		//display
+		void display(ostream &os) const override;
+
 
 };
 

@@ -26,16 +26,18 @@ public:
 	//assignment operator
 	Polynomial& operator=(const Polynomial& p);
 
-	double operator()(const double d) const;
+	double operator()(const double d) const override;
 
 	bool isRoot( double test) ;
 
 	Polynomial operator+(const Polynomial& b) const;
 
 	
-
+	friend Polynomial  operator+(const double b, Polynomial &P) ;
 
 	double &operator[](int i) const;
+
+	Polynomial *clone() const override;
 
 
 private:
@@ -44,5 +46,6 @@ private:
 	 void display(ostream &os) const override;
 };
 
-Polynomial operator+(double d, const Polynomial &P)  ;
+
+//Polynomial operator+(double d, const Polynomial &P)  ;
 #endif

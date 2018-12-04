@@ -24,7 +24,7 @@ public:
 	 
 
 	//clone
-	 //Expression* clone() = 0; //objects of class Expr. can create copies of themselves
+	virtual Expression* clone() const = 0; //objects of class Expr. can create copies of themselves
 
 	//To evaluate an expression
 	//virtual double evaluate() const = 0;
@@ -33,7 +33,7 @@ public:
 
 	friend ostream& operator<<(ostream &os, const Expression &e);
 
-	//double operator()(const double d) const;
+	virtual double operator()(const double d) const = 0;
 
 protected:
 	//Constructor
@@ -48,7 +48,7 @@ protected:
 	//Assignment operator
 	Expression& operator=(const Expression&) = default;
 
-	virtual double operator()(const double d) const = 0;
+	//virtual double operator()(const double d) const = 0;
 
 };
 

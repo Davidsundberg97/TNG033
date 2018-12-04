@@ -46,6 +46,13 @@ Polynomial::Polynomial(const Polynomial& source)
 	}	//Make deep copys
 }
 
+Polynomial* Polynomial::clone() const {
+	
+	
+	
+	return new Polynomial(degree-1, coeff);
+}
+
 
 // d ska vara  f(x) = 2.2 + 3.3x + 4.4x^2 <=> f(d) = 2.2+ 3.3*d + 4.4*d^2
 //vill loopa d^i loopar degree längd
@@ -155,20 +162,21 @@ Polynomial Polynomial::operator+(const Polynomial& b) const {
 }
 //
 //
-//
-Polynomial operator+(double d, Polynomial &P)  {
+////
+ Polynomial operator+(const double d, Polynomial &P)   {
 
-	Polynomial _copy(d);
-	Polynomial _copy2(d);
+	Polynomial _copy(P);
+	Polynomial doublepol(d);
+	
 
 	
 
-	_copy2 = _copy + P;
+	doublepol = _copy + doublepol;
 
-		return _copy2;
+		return doublepol;
 
 }
-//
+////
 //int Polynomial::operator[](int i) const {
 //
 //	return coeff[i];

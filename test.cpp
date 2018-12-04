@@ -133,20 +133,20 @@ int main()
 //    * TEST PHASE 7                                       *
 //    * Logarithm: constructors and operator<<             *
 //    ******************************************************/
-//    std::cout << "\nTEST PHASE 7\n";
-//
-//    Logarithm l0; //default constructor
-//	Logarithm l1{ p3 + 2, 2, 3, 10 };
-//	Logarithm l2{ l1 }; //copy constructor
-//
-//    std::cout << "l0 = " << l0 << std::endl;
-//    std::cout << "l1 = " << l1 << std::endl;
-//    std::cout << "l2 = " << l2 << std::endl;
-//
-////    Expression* e1 = new Polynomial(p4);
-////    Expression* e2 = new Logarithm(l1);
-////    *e1 = *e2; //<-- should not compile!!
-//
+    std::cout << "\nTEST PHASE 7\n";
+
+    Logarithm l0; //default constructor
+	Logarithm l1{ p3 + 2, 2, 3, 10 };
+	Logarithm l2{ l1 }; //copy constructor
+
+    std::cout << "l0 = " << l0 << std::endl;
+    std::cout << "l1 = " << l1 << std::endl;
+    std::cout << "l2 = " << l2 << std::endl;
+
+//    Expression* e1 = new Polynomial(p4);
+//    Expression* e2 = new Logarithm(l1);
+//    *e1 = *e2; //<-- should not compile!!
+
 //    /*****************************************************
 //    * TEST PHASE 8                                       *
 //    * Logarithm: assignment operator                     *
