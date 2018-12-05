@@ -19,7 +19,7 @@ class Expression
 public:
 
 	//Destructor
-	 ~Expression() = default; //Expression is a polymorphic class
+	virtual ~Expression() = default; //Expression is a polymorphic class
 
 	 
 

@@ -158,6 +158,7 @@ Polynomial Polynomial::operator+(const Polynomial& b) const {
 
 		}
 	}
+
 	return _thiscopy2;
 }
 //
@@ -176,6 +177,13 @@ Polynomial Polynomial::operator+(const Polynomial& b) const {
 		return doublepol;
 
 }
+
+ Polynomial::~Polynomial() {
+
+	 delete[] coeff;
+	 coeff = nullptr;
+	 degree = 0;
+ }
 ////
 //int Polynomial::operator[](int i) const {
 //

@@ -81,5 +81,14 @@ void Logarithm::display(ostream &os) const {
 	
 }
 
+Logarithm::~Logarithm() {
+	c1 = 0;
+	c2 = 0;
+	base = 0;
+	delete E;
+	E = nullptr;
+
+}
+
 
 //ADD implementation of the member functions for class Logarithm

@@ -30,6 +30,8 @@ public:
 	//operator() assign
 	double operator()(const double d) const override;
 
+	~Logarithm();
+
 	//bool isRoot(double test);
 
 
