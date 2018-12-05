@@ -28,7 +28,7 @@ public:
 
 	double operator()(const double d) const override;
 
-	bool isRoot( double test) ;
+	//bool isRoot( double test) ;
 
 	Polynomial operator+(const Polynomial& b) const;
 

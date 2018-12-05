@@ -11,7 +11,7 @@
 
 Logarithm::Logarithm()
 	: Expression(), c1{ 0 }, c2{ 1 }, base{ 2 }{
-	double a[2] = { 0,1 };
+	const double a[2] = { 0,1 };
 	E = new Polynomial(1, a);
 }
 
@@ -25,10 +25,48 @@ Logarithm* Logarithm::clone() const {
 	return new Logarithm(*E,c1, c2,base);
 }
 
+Logarithm& Logarithm::operator=(const Logarithm& L) {
+
+	
+	/*swap(this->base, L.clone()->base);
+	swap(this->c1, L.clone()->c1);
+	swap(this->c2, L.clone()->c2);*/
+	swap(this->E, L.clone()->E);
+
+	return *this;
+
+ }
+
 double Logarithm::operator()(const double d) const
 {
-	return 0.0;
+	double result = 0.0;
+
+	result += c1 + ((c2* log(E->operator()(d)) / log(base)));
+
+	//if (base == 2) {
+	//	result = c1 + c2 * log10(E->operator()(d));
+	//}
+	//else if (base == 10) {
+
+	//	result = c1 + c2 * log2(E->operator()(d));
+
+	//}
+
+	return result;
 }
+
+//bool Logarithm::isRoot(double test)
+//{
+//	//if (this->clone()->E->operator()(test) == 0)
+//	//{
+//	//	return true;
+//	//}
+//	//else
+//	//{
+//	//	return false;
+//	//}
+//
+//}
 
 void Logarithm::display(ostream &os) const {
 

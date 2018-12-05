@@ -68,20 +68,20 @@ double Polynomial::operator()(const double d) const
 	return ans;
 }
 
-bool Polynomial::isRoot(double test) 
-{
-	
-		if (operator()(test) == 0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	
-	
-}
+//bool Polynomial::isRoot(double test) 
+//{
+//	
+//		if (operator()(test) == 0)
+//		{
+//			return true;
+//		}
+//		else
+//		{
+//			return false;
+//		}
+//	
+//	
+//}
 
 
 

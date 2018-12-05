@@ -25,11 +25,18 @@ public:
 	//clone()
 	Logarithm *clone() const override;
 
-	// 
+	Logarithm& operator=(const Logarithm& L);
+
+	//operator() assign
 	double operator()(const double d) const override;
+
+	//bool isRoot(double test);
+
+
 
 private:
 	Expression *E;
+
 		double c1;
 		double c2;
 		int base;

@@ -18,12 +18,19 @@ ostream& operator<<(ostream &os, const Expression &e) {
 
 
 
-////is x a root to f(x) ?
-//bool Expression::isRoot(int x) const
-//{
-//	//add code
-//	return false;
-//}
+//is x a root to f(x) ?
+bool Expression::isRoot(const double x) const
+{
+	if (operator()(x) == 0)
+				{
+					return true;
+				}
+			
+				
+					return false;
+				
+	
+}
 
 //operator()
 //double Expression::operator()(const double d) const

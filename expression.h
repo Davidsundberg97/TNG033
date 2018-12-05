@@ -29,7 +29,7 @@ public:
 	//To evaluate an expression
 	//virtual double evaluate() const = 0;
 
-	//bool isRoot(int x) const;
+	bool isRoot(const double x) const ;
 
 	friend ostream& operator<<(ostream &os, const Expression &e);
 
